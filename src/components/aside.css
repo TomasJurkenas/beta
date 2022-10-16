@@ -1,0 +1,64 @@
+h3{
+    margin: 0;
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width:50%;
+    z-index:1;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+    cursor: pointer;
+}
+.line {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    border-style:solid ;
+    border-left: none;
+    border-right: none;
+    border-top: transparent;
+    width: 50%;
+    border-color: silver;
+    padding: 10px 0 10px 25px;
+}
+.dropdown~.dropdown{
+    /*border-style:groove ;*/
+    /*border-left: none;*/
+    /*border-right: none;*/
+    /*border-top: transparent;*/
+    /*width: 50%;*/
+    /*border-color: red;*/
+}
+
+.dropdown:nth-child(3){
+    /*border-style: groove;*/
+    /*border-bottom: transparent;*/
+    /*border-right: none;*/
+    /*border-left: none;*/
+    /*border-color: blue;*/
+    /*display: flex;*/
+    /*justify-content: flex-start;*/
+    /*flex-direction: row;*/
+    /*border-style:groove ;*/
+    /*border-left: none;*/
+    /*border-right: none;*/
+    /*border-bottom: hidden;*/
+    /*width: 50%;*/
+    /*border-color: red;*/
+
+}

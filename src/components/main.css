@@ -1,0 +1,28 @@
+img{
+   border:1px solid black;
+   border-radius: 5px;
+}
+
+.flexCon{
+   display: flex;
+   justify-content: space-evenly;
+   flex-direction: column;
+}
+
+.price{
+   grid-area: price;
+   padding-top: 10px;
+}
+
+.sideBulk{
+   grid-area: bulk;
+}
+
+.smallGrid{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: auto;
+   grid-template-areas:
+    "price  bulk"
+
+}

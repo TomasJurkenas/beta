@@ -1,31 +1,22 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
-
-import {  Routes, Route } from "react-router-dom";
 import {Header} from "./components/header";
+import {Aside} from "./components/aside";
+import {Main} from "./components/main"
+
 
 function App() {
   return (
-    <div>
-        <Routes>
-            <header><Header/></header>
-            <Route path="/"><Header/></Route>
+    <div className="gridContainer">
+      <header> <Header/></header>
+        <aside>
+            <Aside/>
+        </aside>
 
-        </Routes>
-      {/*<header> <Header/></header>*/}
-      {/*  <Routes>*/}
-      {/*      <Route>*/}
-      {/*          <aside>*/}
-      {/*              <nav></nav>*/}
-      {/*          </aside>*/}
-      {/*      </Route>*/}
-      {/*      <Route>*/}
-      {/*          <main>*/}
-      {/*              <div></div>*/}
-      {/*          </main>*/}
-      {/*      </Route>*/}
-      {/*  </Routes>*/}
-      {/*<footer></footer>*/}
+        <main>
+            <Main/>
+        </main>
+
     </div>
   );
 }
