@@ -4,9 +4,14 @@ import {ReactComponent as City} from "../svg/city.svg";
 import {ReactComponent as Family} from "../svg/family.svg";
 import {ReactComponent as Clock} from "../svg/clock.svg";
 import {ReactComponent as Price} from "../svg/price.svg";
-
+import Box from '@mui/material/Box';
+import Slider from '@mui/material/Slider';
+import Checkbox from '@mui/material/Checkbox';
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
 
 export function Aside(){
+
     return(
         <>
             <aside>
@@ -16,6 +21,10 @@ export function Aside(){
                         <h3>Miestas</h3>
                     </div>
                     <div className="dropdown-content">
+                        <FormGroup>
+                            <FormControlLabel control={<Checkbox defaultChecked />} label="Visi pasirinkimai" />
+                            <FormControlLabel control={<Checkbox />} label="Vilnius" />
+                        </FormGroup>
                         <p>Vilnius</p>
                     </div>
                 </div>
@@ -25,6 +34,10 @@ export function Aside(){
                         <h3>Nakvynes trukmė</h3>
                     </div>
                     <div className="dropdown-content">
+                        <FormGroup>
+                            <FormControlLabel control={<Checkbox defaultChecked />} label="Visi pasirinkimai" />
+                            <FormControlLabel control={<Checkbox />} label="1 Naktis" />
+                        </FormGroup>
                         <p>Laikas</p>
                     </div>
                 </div>
@@ -35,8 +48,10 @@ export function Aside(){
                     </div>
 
                     <div className="dropdown-content">
-                        {/*padarytti checkbox*/}
-                        <p>5533zmoniu</p>
+                        <FormGroup>
+                            <FormControlLabel control={<Checkbox defaultChecked />} label="Visi pasirinkimai" />
+                            <FormControlLabel control={<Checkbox />} label="1 asmuo" />
+                        </FormGroup>
                     </div>
                 </div>
                 <div className="dropdown">
@@ -45,7 +60,11 @@ export function Aside(){
                         <h3>Kaina</h3>
                     </div>
                     <div className="dropdown-content">
-                        <p>1000000</p>
+                        <Box width={300}>
+                            <label>price</label>
+                            <Slider defaultValue={50} aria-label="Default" valueLabelDisplay="auto"  min={10} max={500}/>
+                        </Box>
+
                     </div>
                 </div>
             </aside>

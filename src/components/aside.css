@@ -1,5 +1,6 @@
 h3{
     margin: 0;
+    margin-left: 10px;
 }
 
 aside{
@@ -15,7 +16,7 @@ aside{
 .dropdown-content{
     display: none;
     position: absolute;
-    background-color: black;
+    background-color: white;
     min-width:50%;
     z-index:1;
 }
@@ -45,20 +46,7 @@ aside{
     /*border-color: red;*/
 }
 
-.dropdown:nth-child(3){
-    /*border-style: groove;*/
-    /*border-bottom: transparent;*/
-    /*border-right: none;*/
-    /*border-left: none;*/
-    /*border-color: blue;*/
-    /*display: flex;*/
-    /*justify-content: flex-start;*/
-    /*flex-direction: row;*/
-    /*border-style:groove ;*/
-    /*border-left: none;*/
-    /*border-right: none;*/
-    /*border-bottom: hidden;*/
-    /*width: 50%;*/
-    /*border-color: red;*/
+.dropdown:has(.line__h3){
+    color: black;
 
 }
