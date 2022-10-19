@@ -9,9 +9,9 @@ main{
 }
 
 .gridContainer{
-  justify-content: stretch;
+  justify-content: start;
   display: grid;
-  grid-template-columns: 10% 30% 30% 30%;
+  grid-template-columns: 10% 20% 35% 35%;
   grid-template-rows: auto 20px auto;
   grid-template-areas:
     "header header header header"

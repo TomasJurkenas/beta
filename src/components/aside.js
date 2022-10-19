@@ -11,6 +11,14 @@ import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
 export function Aside(){
+   
+    // constructor(props){
+    //     super(props);
+    //     this.headers=[
+    //         {key:'id', label:'Id'},
+    //         {key:'city', label: 'City'}
+    //     ]
+    // }
 
     return(
         <>
@@ -25,7 +33,6 @@ export function Aside(){
                             <FormControlLabel control={<Checkbox defaultChecked />} label="Visi pasirinkimai" />
                             <FormControlLabel control={<Checkbox />} label="Vilnius" />
                         </FormGroup>
-                        <p>Vilnius</p>
                     </div>
                 </div>
                 <div className="dropdown">
@@ -38,7 +45,6 @@ export function Aside(){
                             <FormControlLabel control={<Checkbox defaultChecked />} label="Visi pasirinkimai" />
                             <FormControlLabel control={<Checkbox />} label="1 Naktis" />
                         </FormGroup>
-                        <p>Laikas</p>
                     </div>
                 </div>
                 <div className="dropdown">

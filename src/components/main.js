@@ -4,35 +4,44 @@ import {ReactComponent as Location} from "../svg/location.svg";
 import {ReactComponent as Person} from "../svg/person.svg";
 import {ReactComponent as Clock} from "../svg/clock.svg";
 import {ReactComponent as Calendar} from "../svg/calendar.svg";
+import'../PHP/getData.php';
+import bandymasx from "./components/bandymasx";
 
 export function Main(){
+
     return(
+
         <main>
+            <div className="test">here siuksles  <bandymasx/> </div>
             <div className="infoTable">
                 <img  src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-5h8h4snN1-2PHI4ZNysOkC4-AWOAKwkmNg&usqp=CAU"} alt={"pool"}/>
 
                 <div className="flexCon">
-                    <h2>
+                    <div className="placeName">
                         asfsaffassfsfassfaaf
-                    </h2>
-                    <title>
-                        grand spa
-                    </title>
+                    </div>
 
-                    <h3>
-                        <Location/>
-                        Druskininkai
-                    </h3>
+
+
+                    <div className={"location"}>
+                        <div>
+                            grand spa
+                        </div>
+                        <div>
+                            <Location/>
+                            Druskininkai
+                        </div>
+
+                    </div>
                 </div>
-                <div className="smallGrid">
-                    <div className="price">
+
+                <div className="price">
                         Price 69
-                    </div>
-                    <div className="sideBulk">
-                        <div><Person/>kiek zmoniu</div>
-                        <div><Clock/> nakvynes skaicius</div>
-                        <div><Calendar/> iki kada galioja </div>
-                    </div>
+                </div>
+                <div className="sideBulk">
+                    <div><Person/>kiek zmoniu</div>
+                    <div><Clock/> nakvynes skaicius</div>
+                    <div><Calendar/> iki kada galioja </div>
                 </div>
 
             </div>

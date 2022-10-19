@@ -22,6 +22,7 @@ aside{
 }
 
 .dropdown:hover .dropdown-content{
+    width: 80%;
     display: block;
     cursor: pointer;
 }
@@ -33,20 +34,22 @@ aside{
     border-left: none;
     border-right: none;
     border-top: transparent;
-    width: 50%;
+    width: 80%;
     border-color: silver;
     padding: 10px 0 10px 25px;
 }
-.dropdown~.dropdown{
-    /*border-style:groove ;*/
-    /*border-left: none;*/
-    /*border-right: none;*/
-    /*border-top: transparent;*/
-    /*width: 50%;*/
-    /*border-color: red;*/
+.line:nth-child(2n){
+
+    border-style:groove ;
+    border-left: none;
+    border-right: none;
+    border-top: transparent;
+   width: 50%;
+    border-color: red;
 }
 
-.dropdown:has(.line__h3){
-    color: black;
+.line:has(City) {
+   background-color: black;
 
 }
+

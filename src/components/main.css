@@ -1,28 +1,58 @@
 img{
-   border:1px solid black;
+   border:0px solid black;
    border-radius: 5px;
+   grid-area: image;
+   margin-bottom: 5px;
+   justify-content: stretch;
 }
 
 .flexCon{
    display: flex;
    justify-content: space-evenly;
    flex-direction: column;
+   grid-area: info;
+   margin: 0;
+   width: 100%;
+
+}
+
+.placeName{
+   margin: 5px;
+   font-weight: bold;
+}
+
+.location{
+   margin: 5px;
 }
 
 .price{
    grid-area: price;
-   padding-top: 10px;
+   margin-top: 10px;
+   margin-left: 5px;
+   font-weight: bolder;
 }
 
 .sideBulk{
    grid-area: bulk;
+   margin-right:5px;
+   margin-bottom: 5px;
+   font-weight: lighter;
 }
 
-.smallGrid{
+.infoTable{
+   width:30%;
+   background-color:whitesmoke;
+   border: black solid 1px;
+   border-radius: 5px;
    display: grid;
-   grid-template-columns: 1fr 1fr;
-   grid-template-rows: auto;
+   grid-template-columns:auto;
+   grid-template-rows:24% 2% 24%;
    grid-template-areas:
-    "price  bulk"
+   "image image image"
+    "info info info"
+   "price . bulk "
+}
 
+.infoTable:hover{
+   box-shadow: 5px 5px 5px gray;
 }
