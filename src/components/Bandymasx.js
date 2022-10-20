@@ -16,13 +16,11 @@ class Bandymasx extends React.Component{
             console.log(response);
             return response.json();
         }).then(result => {
-            // Work with JSON data here
             console.log(result);
             this.setState({
                 activityInfo_rs:result
             });
         }).catch(err => {
-            // Do something for an error here
             console.log("Error Reading data " + err);
         });
     }
@@ -47,7 +45,6 @@ class Bandymasx extends React.Component{
                         </thead>
                         <tbody>
                         {
-                            // this.state.activityInfo.map()
                             this.state.activityInfo_rs.map(function(item, index) {
                                 return (
                                     <tr key={index}>
