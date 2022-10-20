@@ -1,14 +1,16 @@
 <?php
 //reik dar prijungti butinai susitvarkyma
+header("Access-Control-Allow-Origin: *");
 $servername = "localhost";
 $username = "tomas";
 $password = "tomas";
-$dbname = "manoDuombaze";
+$dbname = "kcs_db";
 $id='';
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
+
 
 $method = $_SERVER['REQUEST_METHOD'];
 if ($conn->connect_error) {
@@ -17,7 +19,7 @@ if ($conn->connect_error) {
 
 switch ($method){
     case 'GET':
-        $sql="select* from activityInfo";
+        $sql="select * from activityInfo";
         break;
 }
 
@@ -25,7 +27,7 @@ $result=mysqli_query($conn, $sql);
 
 if (!$result){
     http_response_code(404);
-    die(mysql_errno($conn));
+    die(mysqli_error($conn));
 }
 
 if($method == 'GET'){
@@ -38,6 +40,14 @@ if($method == 'GET'){
     mysqli_affected_rows($conn);
 }
 $conn->close();
+
+
+
+
+
+
+
+
 
 //$sql = "SELECT id, city, price FROM activityInfo";
 //$result = $conn->query($sql);

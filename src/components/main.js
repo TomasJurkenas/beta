@@ -1,18 +1,23 @@
 import React from "react";
+import ReactDOM from "react-dom/client";
 import './main.css';
 import {ReactComponent as Location} from "../svg/location.svg";
 import {ReactComponent as Person} from "../svg/person.svg";
 import {ReactComponent as Clock} from "../svg/clock.svg";
 import {ReactComponent as Calendar} from "../svg/calendar.svg";
 import'../PHP/getData.php';
-import bandymasx from "./components/bandymasx";
-
+import Bandymasx from "../components/Bandymasx";
+//
+//
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(<Bandymasx />);
 export function Main(){
 
     return(
 
         <main>
-            <div className="test">here siuksles  <bandymasx/> </div>
+            <a href={'../PHP/getData.php'}>asdddddddddd</a>
+            <div className="test">here siuksles <Bandymasx/> </div>
             <div className="infoTable">
                 <img  src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-5h8h4snN1-2PHI4ZNysOkC4-AWOAKwkmNg&usqp=CAU"} alt={"pool"}/>
 

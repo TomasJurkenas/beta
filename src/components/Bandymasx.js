@@ -1,16 +1,18 @@
 import React from 'react';
+import'../PHP/getData.php';
 
-class bandymasx extends React.Component{
+
+class Bandymasx extends React.Component{
     constructor(props) {
         super(props);
         this.state={activityInfo:[]};
         this.headers=[
             {key: 'id', label:'id'},
-            {key: 'city', label: 'city'}
+            {key: 'price', label: 'price'}
         ];
     }
     componentDidMount() {
-        fetch('http://localhost:3000/getData.php').then(response =>{
+        fetch('../PHP/getData.php').then(response =>{
             console.log(response);
             return response.json();
         }).then(result => {
@@ -25,13 +27,13 @@ class bandymasx extends React.Component{
         });
     }
     render() {
-        const employeeFound = this.state.employee_rs && this.state.employee_rs.length;
-        if(employeeFound) {
+        const activityInfoFound = this.state.activityInfo_rs && this.state.activityInfo_rs.length;
+        if(activityInfoFound) {
             return (
-                <div className="container"><h1>ReactJS Fetch Data from Database with PHP Mysql</h1>
-                    <div id="msg"></div>
+                <div><h1>ReactJS Fetch Data from Database with PHP Mysql</h1>
+                    <div ></div>
 
-                    <table className="table table-bordered table-striped">
+                    <table >
                         <thead>
                         <tr>
                             {
@@ -45,10 +47,11 @@ class bandymasx extends React.Component{
                         </thead>
                         <tbody>
                         {
+                            // this.state.activityInfo.map()
                             this.state.activityInfo_rs.map(function(item, index) {
                                 return (
                                     <tr key={index}>
-                                        <td><input type="checkbox" className="selectsingle" value="{item.id}" checked={this.state.checkedBoxes.find((p) => p.id === item.id)} onChange={(e) => this.toggleCheckbox(e, item)}/>
+                                        <td>/>
                                             {item.id}
                                         </td>
                                         <td>{item.city}</td>
@@ -62,11 +65,12 @@ class bandymasx extends React.Component{
             )
         } else {
             return (
-                <div id="container">
-                    No product found
+                <div>
+                    Null
                 </div>
             )
         }
     }
 }
-export default bandymasx;
+
+export default Bandymasx;
