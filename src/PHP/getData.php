@@ -1,10 +1,11 @@
 <?php
 //reik dar prijungti butinai susitvarkyma
+
 header("Access-Control-Allow-Origin: *");
 $servername = "localhost";
 $username = "tomas";
 $password = "tomas";
-$dbname = "kcs_db";
+$dbname = "manoDuombaze";
 $id='';
 
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -17,7 +18,7 @@ if (!$conn) {
 
 switch ($method){
     case 'GET':
-        $sql="SELECT * FROM activity_info";
+        $sql="select * from activityInfo";
         break;
 }
 

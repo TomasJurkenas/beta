@@ -9,20 +9,15 @@ import Slider from '@mui/material/Slider';
 import Checkbox from '@mui/material/Checkbox';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
+import Records from '../MOCK_DATA.json'
 
 export function Aside(){
-   
-    // constructor(props){
-    //     super(props);
-    //     this.headers=[
-    //         {key:'id', label:'Id'},
-    //         {key:'city', label: 'City'}
-    //     ]
-    // }
+
 
     return(
         <>
             <aside>
+
                 <div className="dropdown">
                     <div className="line">
                         <City/>
@@ -30,8 +25,17 @@ export function Aside(){
                     </div>
                     <div className="dropdown-content">
                         <FormGroup>
-                            <FormControlLabel control={<Checkbox defaultChecked />} label="Visi pasirinkimai" />
-                            <FormControlLabel control={<Checkbox />} label="Vilnius" />
+                            {
+                                Records.map(record=>{
+                                    return(
+                                        <div key={record.id}>
+
+                                            <FormControlLabel control={<Checkbox />} label={record.city} />
+                                        </div>
+                                    )
+                                })
+                            }
+
                         </FormGroup>
                     </div>
                 </div>

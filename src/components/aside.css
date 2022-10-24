@@ -11,6 +11,7 @@ aside{
 .dropdown{
     position: relative;
     display: inline-block;
+
 }
 
 .dropdown-content{
@@ -19,12 +20,15 @@ aside{
     background-color: white;
     min-width:50%;
     z-index:1;
+
 }
 
 .dropdown:hover .dropdown-content{
     width: 80%;
     display: block;
     cursor: pointer;
+    height: 1000px;
+
 }
 .line {
     display: flex;

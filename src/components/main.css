@@ -3,7 +3,7 @@ img{
    border-radius: 5px;
    grid-area: image;
    margin-bottom: 5px;
-   justify-content: stretch;
+
 }
 
 .flexCon{
@@ -26,6 +26,8 @@ img{
 }
 
 .price{
+
+   font-size: xx-large;
    grid-area: price;
    margin-top: 10px;
    margin-left: 5px;
@@ -33,6 +35,10 @@ img{
 }
 
 .sideBulk{
+   display: flex;
+   flex-direction: column;
+   align-items: baseline;
+  font-size:x-small;
    grid-area: bulk;
    margin-right:5px;
    margin-bottom: 5px;
@@ -40,12 +46,13 @@ img{
 }
 
 .infoTable{
+   margin-bottom: 20px;
    width:30%;
    background-color:whitesmoke;
    border: black solid 1px;
    border-radius: 5px;
    display: grid;
-   grid-template-columns:auto;
+   grid-template-columns:50% 25% 25%;
    grid-template-rows:24% 2% 24%;
    grid-template-areas:
    "image image image"
@@ -55,4 +62,11 @@ img{
 
 .infoTable:hover{
    box-shadow: 5px 5px 5px gray;
+}
+.maybe{
+   align-items: baseline;
+   flex-direction: row;
+   display: flex;
+   justify-content:space-evenly;
+   flex-wrap: wrap;
 }
